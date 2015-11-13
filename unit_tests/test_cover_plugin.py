@@ -5,6 +5,7 @@ from nose.plugins.cover import Coverage
 from nose.tools import eq_
 import unittest
 
+
 class TestCoveragePlugin(object):
 
     def test_cover_packages_option(self):
@@ -20,6 +21,7 @@ class TestCoveragePlugin(object):
         c = Coverage()
         parser = OptionParser()
         c.addOptions(parser, env)
-        options, args = parser.parse_args(['test_can_be_disabled'])
+        options, args = parser.parse_args(['test_can_be_disabled',
+                                           '--cover-no-print'])
         c.configure(options, Config())
         eq_(['pkg1', 'pkg2', 'pkg3'], c.coverPackages)

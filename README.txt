@@ -389,6 +389,10 @@ Options
 
    Produce XML coverage information in file
 
+--cover-no-print
+
+   Suppress printing of coverage information
+
 --pdb
 
    Drop into debugger on failures or errors
